@@ -1,0 +1,30 @@
+.body{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
+.menu1{
+    display: none;
+}
+.menu{
+    width: 15%;
+    height: 100vh;
+}
+.navbar{
+    background: #00868B;
+}
+.rou{
+    width: 85%;
+}
+
+@media(max-width:850px){
+  
+.menu1{
+    display: flex;
+}
+.menu{
+    display: none;
+
+}
+}
