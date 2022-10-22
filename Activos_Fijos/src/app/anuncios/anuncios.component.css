@@ -1,8 +1,21 @@
+.titulor{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 200px;
+    width: 100%;
+}
+.ti{
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-weight: 700;
+}
 .menu{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
+    height: 300px;
     width: 100%;
     flex-flow: wrap row;
 }
