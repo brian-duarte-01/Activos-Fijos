@@ -1,0 +1,19 @@
+.titulo{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+}
+.ti{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.scroll{
+    overflow-y: scroll;
+    height: 70px;
+}
+.scroll::-webkit-scrollbar{
+    width: 5px;
+}
