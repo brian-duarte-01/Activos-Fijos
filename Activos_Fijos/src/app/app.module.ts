@@ -13,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { LestadoComponent } from './lestado/lestado.component';
 import { RestadoComponent } from './restado/restado.component';
+import { TcategoriaComponent } from './tcategoria/tcategoria.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { RestadoComponent } from './restado/restado.component';
     LDepartamentoComponent,
     RdepartamentoComponent,
     LestadoComponent,
-    RestadoComponent
+    RestadoComponent,
+    TcategoriaComponent
   ],
   imports: [
     BrowserModule,

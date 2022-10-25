@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TcategoriaService } from './services/tcategoria.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Activos_Fijos';
+
 }

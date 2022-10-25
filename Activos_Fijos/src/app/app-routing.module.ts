@@ -5,6 +5,7 @@ import { LDepartamentoComponent } from './ldepartamento/ldepartamento.component'
 import { LestadoComponent } from './lestado/lestado.component';
 import { RdepartamentoComponent } from './rdepartamento/rdepartamento.component';
 import { RestadoComponent } from './restado/restado.component';
+import { TcategoriaComponent } from './tcategoria/tcategoria.component';
 
 const routes: Routes = [
   {path:'dashboard', component: AnunciosComponent},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:'departamento', component: LDepartamentoComponent},
   {path:'rdepartamento', component: RdepartamentoComponent},
   {path:'estado', component: LestadoComponent},
-  {path:'restado', component: RestadoComponent}
+  {path:'restado', component: RestadoComponent},
+  {path:'tcategoria', component: TcategoriaComponent}
 ];
 
 @NgModule({
