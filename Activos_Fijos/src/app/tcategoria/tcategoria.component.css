@@ -5,10 +5,21 @@
     height: 40px;
     width: 100%;
 }
+.titulo1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40px;
+    width: 100%;
+}
 .ti{
     font-size: 20px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+}
+.ti1{
+    font-size: 30px;
+    font-weight: 700;
 }
 .scroll{
     overflow-y: scroll;
