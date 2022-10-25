@@ -29,3 +29,6 @@
 .scroll::-webkit-scrollbar{
     width: 5px;
 }
+.td{
+    text-align: center;
+}
