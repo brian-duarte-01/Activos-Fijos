@@ -14,6 +14,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { LestadoComponent } from './lestado/lestado.component';
 import { RestadoComponent } from './restado/restado.component';
 import { TcategoriaComponent } from './tcategoria/tcategoria.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormTcategoriaComponent } from './tcategoria/form-tcategoria/form-tcategoria.component';
+
 
 
 @NgModule({
@@ -24,7 +27,8 @@ import { TcategoriaComponent } from './tcategoria/tcategoria.component';
     RdepartamentoComponent,
     LestadoComponent,
     RestadoComponent,
-    TcategoriaComponent
+    TcategoriaComponent,
+    FormTcategoriaComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { TcategoriaComponent } from './tcategoria/tcategoria.component';
     BrowserAnimationsModule,
     MatTooltipModule,
     MatButtonModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FormsModule,
+    ReactiveFormsModule
 
 
   ],

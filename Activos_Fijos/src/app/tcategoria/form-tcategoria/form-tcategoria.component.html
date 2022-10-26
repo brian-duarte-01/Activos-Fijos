@@ -1,0 +1,33 @@
+<form action="">
+    <div>
+        <label for="ID_TIPO_CATEGORIA">ID Tipo Categoria</label>
+        <div>
+            <input type="text" name="ID_TIPO_CATEGORIA"  disabled placeholder="ID autogenerado" [(ngModel)]="maquinaria.ID_TIPO_CATEGORIA" >
+        </div>
+    </div>
+    <div>
+        <label for="MQ_FABRICANTE">Fabricante</label>
+        <div>
+            <input type="text" name="MQ_FABRICANTE"   placeholder="Ingrese Fabricante" [(ngModel)]="maquinaria.MQ_FABRICANTE" >
+        </div>
+    </div>
+    <div>
+        <label for="MQ_TIPO">Tipo</label>
+        <div>
+            <input type="text" name="MQ_TIPO"   placeholder="Ingrese Tipo" [(ngModel)]="maquinaria.MQ_TIPO" >
+        </div>
+    </div>
+    <div>
+        <label for="MQ_MODELO">Modelo</label>
+        <div>
+            <input type="text" name="MQ_MODELO"  placeholder="Ingrese Modelo" [(ngModel)]="maquinaria.MQ_MODELO" >
+        </div>
+    </div>
+    <div>
+        <label for="MQ_DESCRIPCION">Descripcion</label>
+        <div>
+            <input type="text" name="MQ_DESCRIPCION"  placeholder="Ingrese Descripcion" [(ngModel)]="maquinaria.MQ_DESCRIPCION" >
+        </div>
+    </div>
+    <button class="btn btn-success" role="button" (click)="ingresarmaq()">Registrar Maquinaria</button>
+</form>
