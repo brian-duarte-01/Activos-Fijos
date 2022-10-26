@@ -29,4 +29,10 @@ export class TcategoriaComponent implements OnInit {
 
   }
 
+  findmaq (id: number){
+    let maqactual = this.tcategoria.find((p) => {return p.ID_TIPO_CATEGORIA == id});
+    console.log(maqactual);
+
+  }
+
 }

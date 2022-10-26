@@ -31,7 +31,8 @@
             <td class="td" [hidden]="t_categoria.MQ_DESCRIPCION=='null'">
               <div class="btn-group btn-group-sm">
 
-                <button mat-raised-button matTooltip="Editar Registro" type="button" mat-button color="primary">
+                <button type="button" name="buttom" class="btn btn-primary" role="button" [routerLink]="['crmaquinaria', t_categoria.ID_TIPO_CATEGORIA]">Editar</button>
+                <button mat-raised-button matTooltip="Editar Registro" type="button" mat-button color="primary" [routerLink]="['crmaquinaria', 2]">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-pencil-square" viewBox="0 0 16 16">
                     <path

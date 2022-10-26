@@ -16,7 +16,8 @@ const routes: Routes = [
   {path:'estado', component: LestadoComponent},
   {path:'restado', component: RestadoComponent},
   {path:'tcategoria', component: TcategoriaComponent},
-  {path:'tcategoria/crmaquinaria', component: FormTcategoriaComponent}
+  {path:'tcategoria/crmaquinaria', component: FormTcategoriaComponent},
+  {path:'tcategoria/crmaquinaria/:id', component: FormTcategoriaComponent}
 ];
 
 @NgModule({

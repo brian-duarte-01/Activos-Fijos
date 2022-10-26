@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { TcategoriaService } from 'src/app/services/tcategoria.service';
 import { maquinaria } from '../maquinaria';
 
@@ -12,16 +12,19 @@ import { maquinaria } from '../maquinaria';
 export class FormTcategoriaComponent implements OnInit {
   titulo:string="Regristro de Tipo de Categoria";
   maquinaria: maquinaria = new maquinaria();
+  public tcategoria:Array<any> = []
   _url = 'https://localhost:44340/api/TIPO_CATEGORIA'
 
   constructor(
     private tcategoriaService:TcategoriaService,
     private router:Router,
-    private http: HttpClient
+    private http: HttpClient,
+    private activatedRoute: ActivatedRoute
 
   ) { }
 
   ngOnInit(): void {
+    this.cargarmaq();
   }
 
   ingresarmaq():void{
@@ -58,4 +61,28 @@ export class FormTcategoriaComponent implements OnInit {
 
 
 }
+
+cargarmaq():void{
+    this.activatedRoute.params.subscribe(
+      e=>{
+        let id=e['id'];
+        if(id){
+          this.tcategoria.find((p) => {p.ID_TIPO_CATEGORIA == id})
+          .subscribe(
+            (es: maquinaria)=>this.maquinaria=es
+          );
+        }
+      }
+
+    );
+
+}
+
+findmaq (id: number){
+  let maqactual = this.tcategoria.find((p) => {return p.ID_TIPO_CATEGORIA == id});
+  console.log(maqactual);
+
+}
+
+
 }
