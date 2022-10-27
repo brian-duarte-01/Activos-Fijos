@@ -14,9 +14,9 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { LestadoComponent } from './lestado/lestado.component';
 import { RestadoComponent } from './restado/restado.component';
 import { TcategoriaComponent } from './tcategoria/tcategoria.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormTcategoriaComponent } from './tcategoria/form-tcategoria/form-tcategoria.component';
-
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -39,7 +39,9 @@ import { FormTcategoriaComponent } from './tcategoria/form-tcategoria/form-tcate
     MatButtonModule,
     MatPaginatorModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule
+
 
 
   ],

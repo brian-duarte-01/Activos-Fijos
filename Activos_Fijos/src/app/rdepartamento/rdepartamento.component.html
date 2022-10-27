@@ -1,1 +1,42 @@
-<p>rdepartamento works!</p>
+<div class="container">
+    <div class="fom">
+        <div>
+            <form class="row g-3" [formGroup]="form" (ngSubmit)="post()">
+
+
+
+
+                <div class="col-md-12">
+
+
+
+                    <div class="col-md-12">
+                        <label for="validationDefault01" class="form-label">Departamento <b>*</b></label>
+                        <input type="text" placeholder="Digite el nombre de un departamento" class="form-control"
+                            formControlName="DEP_NOMBRE" id="nombre">
+
+                        <div class="alert alert-danger" *ngIf="form.invalid && (form.dirty || form.touched)">
+                            <div class="container-error-message">
+                                Ingrese el nombre de un departamento
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="col-12">
+                    <button class="btn btn-primary" mat-raised-button matTooltip="Registrar el departamento" mat-button
+                        color="primary" [disabled]="!form.valid">Enviar</button>
+                </div>
+            </form>
+
+            <div class="re">
+                <h3> ( <b>*</b> ) Asterisco Campo Obligatotio </h3>
+            </div>
+        </div>
+    </div>
+</div>

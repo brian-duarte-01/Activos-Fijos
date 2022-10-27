@@ -7,7 +7,15 @@
   <div class="titulo">
     <h1 class="ti">Maquinaria</h1>
   </div>
-  <button class="btn btn-info" type="button" routerLink="crmaquinaria">Agregar CAT. Maquinaria</button>
+  <button class="btn btn-info" mat-raised-button matTooltip="Registrar nueva maquinaria" type="button" mat-button
+    color="primary" type="button" routerLink="crmaquinaria">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus"
+      viewBox="0 0 16 16">
+      <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
+      <path
+        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+    </svg> Nueva CAT. Maquinaria
+  </button>
   <div class="scroll">
     <div class="table-responsive">
       <table class="table table-primary table-sm table-striped table-bordered">
@@ -31,8 +39,14 @@
             <td class="td" [hidden]="t_categoria.MQ_DESCRIPCION=='null'">
               <div class="btn-group btn-group-sm">
 
+<<<<<<< HEAD
                 <button type="button" name="buttom" class="btn btn-primary" role="button" [routerLink]="['crmaquinaria', t_categoria.ID_TIPO_CATEGORIA]" (click)="findmaq(t_categoria.ID_TIPO_CATEGORIA)">Editar</button>
                 <button mat-raised-button matTooltip="Editar Registro" type="button" mat-button color="primary" [routerLink]="['crmaquinaria', 2]">
+=======
+                <button type="button" name="buttom" mat-raised-button matTooltip="Editar Registro" type="button"
+                  mat-button color="primary" [routerLink]="['crmaquinaria', 2]" class="btn btn-primary" role="button"
+                  [routerLink]="['crmaquinaria', t_categoria.ID_TIPO_CATEGORIA]">
+>>>>>>> 2980188e3e3be6df85e535b5cf58b3fd863eb7cf
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-pencil-square" viewBox="0 0 16 16">
                     <path
@@ -41,6 +55,7 @@
                       d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
                   </svg>
                 </button>
+
 
                 <button mat-raised-button matTooltip="Eliminar Registro" type="button" mat-button color="warn">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -223,7 +238,7 @@
         </tbody>
       </table>
     </div>
-  
+
   </div>
 
 
