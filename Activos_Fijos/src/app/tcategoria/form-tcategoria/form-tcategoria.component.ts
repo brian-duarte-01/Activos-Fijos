@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { TcategoriaService } from 'src/app/services/tcategoria.service';
@@ -15,6 +15,7 @@ export class FormTcategoriaComponent implements OnInit {
   public tcategoria:Array<any> = []
   _url = 'https://localhost:44340/api/TIPO_CATEGORIA'
 
+
   constructor(
     private tcategoriaService:TcategoriaService,
     private router:Router,
@@ -25,6 +26,9 @@ export class FormTcategoriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarmaq();
+    let ide = this.activatedRoute.snapshot.paramMap.get('id');
+    this.findmaq(ide);
+
   }
 
   ingresarmaq():void{
@@ -68,9 +72,7 @@ cargarmaq():void{
         let id=e['id'];
         if(id){
           this.tcategoria.find((p) => {p.ID_TIPO_CATEGORIA == id})
-          .subscribe(
-            (es: maquinaria)=>this.maquinaria=es
-          );
+        
         }
       }
 
@@ -78,10 +80,9 @@ cargarmaq():void{
 
 }
 
-findmaq (id: number){
+findmaq (id: any){
   let maqactual = this.tcategoria.find((p) => {return p.ID_TIPO_CATEGORIA == id});
-  console.log(maqactual);
-
+    console.log(maqactual);
 }
 
 

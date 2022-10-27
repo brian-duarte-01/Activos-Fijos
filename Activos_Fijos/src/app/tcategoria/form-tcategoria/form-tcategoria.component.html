@@ -29,5 +29,10 @@
             <input type="text" name="MQ_DESCRIPCION"  placeholder="Ingrese Descripcion" [(ngModel)]="maquinaria.MQ_DESCRIPCION" >
         </div>
     </div>
-    <button class="btn btn-success" role="button" (click)="ingresarmaq()">Registrar Maquinaria</button>
+    <button class="btn btn-success" role="button" (click)="ingresarmaq()" *ngIf="!maquinaria.ID_TIPO_CATEGORIA else elseBlock">Registrar Maquinaria</button>
+
+    <ng-template #elseBlock>
+        <button class="btn btn-success" role="button" >Actualizar</button>
+    </ng-template>
+    
 </form>
