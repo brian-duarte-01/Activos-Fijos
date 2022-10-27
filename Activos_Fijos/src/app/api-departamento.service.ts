@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { timeStamp } from 'console';
+import { Observable } from 'rxjs';
 import { Departamento } from './Models/DepartamentoModel';
 
 @Injectable({
@@ -7,7 +9,7 @@ import { Departamento } from './Models/DepartamentoModel';
 })
 export class ApiDepartamentoService {
 
-  _url = 'https://localhost:44340/api/ACT_DEPARTAMENTO';
+
 
 
   constructor(
@@ -22,7 +24,18 @@ export class ApiDepartamentoService {
     return this.http.post(url, body);
   }
 
-  
+  // actualizar
+  getAll(id: string): Observable<Departamento> {
+    let _url = 'https://localhost:44340/api/ACT_DEPARTAMENTO/' + id;
+    return this.http.get<Departamento>(_url);
+  }
+
+  put(formulario: Departamento) {
+    let _url = 'https://localhost:44340/api/ACT_DEPARTAMENTO'+'/'+formulario.ID_DEPARTAMENTO;
+    return this.http.put(_url, formulario);
+  }
+
+
 
 
 

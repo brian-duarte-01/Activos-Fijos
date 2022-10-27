@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 import { ApiDepartamentoService } from '../api-departamento.service';
 
 @Component({
@@ -9,20 +10,15 @@ import { ApiDepartamentoService } from '../api-departamento.service';
 })
 export class LDepartamentoComponent implements OnInit {
   listar: any = [];
-  form!: FormGroup;
 
   constructor(
     private apiRest: ApiDepartamentoService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private route: Router
   ) { }
 
   ngOnInit(): void {
     this.get();
-
-    this.form = this.fb.group({
-      ID_DEPARTAMENTO: ['0'],
-      DEP_NOMBRE: new FormControl('', [Validators.required])
-    });
   }
 
   public get() {
@@ -30,6 +26,10 @@ export class LDepartamentoComponent implements OnInit {
       .subscribe(respuesta => {
         this.listar = respuesta;
       })
+  }
+
+  editar(id:number) {
+   this.route.navigate(['edepartamento',id]);
   }
 
 

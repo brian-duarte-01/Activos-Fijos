@@ -1,4 +1,4 @@
 export class Departamento {
-    ID_DEPARTAMENTO: number | undefined;
+    ID_DEPARTAMENTO!: number;
     DEP_NOMBRE!: string;
 }

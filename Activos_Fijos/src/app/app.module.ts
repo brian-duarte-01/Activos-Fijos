@@ -17,6 +17,8 @@ import { TcategoriaComponent } from './tcategoria/tcategoria.component';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormTcategoriaComponent } from './tcategoria/form-tcategoria/form-tcategoria.component';
 import {MatInputModule} from '@angular/material/input';
+import { EdepartamentoComponent } from './edepartamento/edepartamento.component';
+
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import {MatInputModule} from '@angular/material/input';
     LestadoComponent,
     RestadoComponent,
     TcategoriaComponent,
-    FormTcategoriaComponent
+    FormTcategoriaComponent,
+    EdepartamentoComponent
   ],
   imports: [
     BrowserModule,
