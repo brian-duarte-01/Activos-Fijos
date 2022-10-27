@@ -39,14 +39,9 @@
             <td class="td" [hidden]="t_categoria.MQ_DESCRIPCION=='null'">
               <div class="btn-group btn-group-sm">
 
-<<<<<<< HEAD
                 <button type="button" name="buttom" class="btn btn-primary" role="button" [routerLink]="['crmaquinaria', t_categoria.ID_TIPO_CATEGORIA]" (click)="findmaq(t_categoria.ID_TIPO_CATEGORIA)">Editar</button>
+                <button type="button" name="buttom" class="btn btn-danger" role="button"  (click)="elimimaq(t_categoria.ID_TIPO_CATEGORIA)">Eliminar</button>
                 <button mat-raised-button matTooltip="Editar Registro" type="button" mat-button color="primary" [routerLink]="['crmaquinaria', 2]">
-=======
-                <button type="button" name="buttom" mat-raised-button matTooltip="Editar Registro" type="button"
-                  mat-button color="primary" [routerLink]="['crmaquinaria', 2]" class="btn btn-primary" role="button"
-                  [routerLink]="['crmaquinaria', t_categoria.ID_TIPO_CATEGORIA]">
->>>>>>> 2980188e3e3be6df85e535b5cf58b3fd863eb7cf
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-pencil-square" viewBox="0 0 16 16">
                     <path

@@ -1,5 +1,5 @@
 export class maquinaria {
-    ID_TIPO_CATEGORIA!: 1;
+    ID_TIPO_CATEGORIA!: number;
         DP_NOMBRE!: string;
         DP_SERIE!: string;
         DP_FECHA_DE_VENCIMIENTO!: string;

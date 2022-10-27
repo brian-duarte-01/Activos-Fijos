@@ -1,38 +1,36 @@
-<form action="">
-    <div>
+<form [formGroup]="editarform">
+    <div class="form-group">
         <label for="ID_TIPO_CATEGORIA">ID Tipo Categoria</label>
-        <div>
-            <input type="text" name="ID_TIPO_CATEGORIA"  disabled placeholder="ID autogenerado" [(ngModel)]="maquinaria.ID_TIPO_CATEGORIA" >
-        </div>
+            <input type="text" class="form-control" name="ID_TIPO_CATEGORIA"   placeholder="ID autogenerado" [(ngModel)]="maquinaria.ID_TIPO_CATEGORIA" formControlName="ID_TIPO_CATEGORIA">
     </div>
-    <div>
+    <div class="form-group">
         <label for="MQ_FABRICANTE">Fabricante</label>
-        <div>
-            <input type="text" name="MQ_FABRICANTE"   placeholder="Ingrese Fabricante" [(ngModel)]="maquinaria.MQ_FABRICANTE" >
-        </div>
+       
+            <input type="text" name="MQ_FABRICANTE"  class="form-control" placeholder="Ingrese Fabricante" [(ngModel)]="maquinaria.MQ_FABRICANTE" formControlName="MQ_FABRICANTE">
+       
     </div>
-    <div>
+    <div class="form-group">
         <label for="MQ_TIPO">Tipo</label>
-        <div>
-            <input type="text" name="MQ_TIPO"   placeholder="Ingrese Tipo" [(ngModel)]="maquinaria.MQ_TIPO" >
-        </div>
+       
+            <input type="text" name="MQ_TIPO" class="form-control"  placeholder="Ingrese Tipo" [(ngModel)]="maquinaria.MQ_TIPO" formControlName="MQ_TIPO">
+        
     </div>
-    <div>
+    <div class="form-group">
         <label for="MQ_MODELO">Modelo</label>
-        <div>
-            <input type="text" name="MQ_MODELO"  placeholder="Ingrese Modelo" [(ngModel)]="maquinaria.MQ_MODELO" >
-        </div>
+        
+            <input type="text" name="MQ_MODELO" class="form-control" placeholder="Ingrese Modelo" [(ngModel)]="maquinaria.MQ_MODELO" formControlName="MQ_MODELO">
+        
     </div>
-    <div>
+    <div class="form-group">
         <label for="MQ_DESCRIPCION">Descripcion</label>
-        <div>
-            <input type="text" name="MQ_DESCRIPCION"  placeholder="Ingrese Descripcion" [(ngModel)]="maquinaria.MQ_DESCRIPCION" >
-        </div>
+        
+            <input type="text" name="MQ_DESCRIPCION" class="form-control" placeholder="Ingrese Descripcion" [(ngModel)]="maquinaria.MQ_DESCRIPCION" formControlName="MQ_DESCRIPCION">
+        
     </div>
     <button class="btn btn-success" role="button" (click)="ingresarmaq()" *ngIf="!maquinaria.ID_TIPO_CATEGORIA else elseBlock">Registrar Maquinaria</button>
 
     <ng-template #elseBlock>
-        <button class="btn btn-success" role="button" >Actualizar</button>
+        <button class="btn btn-success" role="button" (click)="editar(editarform.value)" >Actualizar</button>
     </ng-template>
     
 </form>
