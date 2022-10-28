@@ -1,1 +1,42 @@
-<p>restado works!</p>
+<div class="container">
+    <div class="fom">
+        <div>
+            <form class="row g-3" [formGroup]="form" (ngSubmit)="post()">
+
+
+
+
+                <div class="col-md-12">
+
+
+
+                    <div class="col-md-12">
+                        <label for="validationDefault01" class="form-label">Estado <b>*</b></label>
+                        <input type="text" placeholder="Digite un estado" class="form-control"
+                            formControlName="act_nombre" id="nombre">
+
+                        <div class="alert alert-danger" *ngIf="form.invalid && (form.dirty || form.touched)">
+                            <div class="container-error-message">
+                                Ingrese un estado 
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="col-12">
+                    <button class="btn btn-primary" mat-raised-button matTooltip="Registrar un estado" mat-button
+                        color="primary" [disabled]="!form.valid">Enviar</button>
+                </div>
+            </form>
+
+            <div class="re">
+                <h3> ( <b>*</b> ) Asterisco Campo Obligatotio </h3>
+            </div>
+        </div>
+    </div>
+</div>
