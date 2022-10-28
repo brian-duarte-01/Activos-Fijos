@@ -8,6 +8,8 @@ import { RestadoComponent } from './restado/restado.component';
 import { TcategoriaComponent } from './tcategoria/tcategoria.component';
 import { FormTcategoriaComponent } from './tcategoria/form-tcategoria/form-tcategoria.component';
 import { EdepartamentoComponent } from './edepartamento/edepartamento.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { FormCategoriaComponent } from './categoria/form-categoria/form-categoria.component';
 
 const routes: Routes = [
   {path:'dashboard', component: AnunciosComponent},
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path:'estado', component: LestadoComponent},
   {path:'restado', component: RestadoComponent},
   {path:'tcategoria', component: TcategoriaComponent},
+  {path:'categoria', component: CategoriaComponent},
+  {path:'categoria/crcategoria', component: FormCategoriaComponent},
   {path:'tcategoria/crmaquinaria', component: FormTcategoriaComponent},
   {path:'tcategoria/crmaquinaria/:id', component: FormTcategoriaComponent},
   {path:'edepartamento/:id', component: EdepartamentoComponent}

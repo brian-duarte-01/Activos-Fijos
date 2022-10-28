@@ -18,6 +18,8 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormTcategoriaComponent } from './tcategoria/form-tcategoria/form-tcategoria.component';
 import {MatInputModule} from '@angular/material/input';
 import { EdepartamentoComponent } from './edepartamento/edepartamento.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { FormCategoriaComponent } from './categoria/form-categoria/form-categoria.component';
 
 
 
@@ -31,7 +33,9 @@ import { EdepartamentoComponent } from './edepartamento/edepartamento.component'
     RestadoComponent,
     TcategoriaComponent,
     FormTcategoriaComponent,
-    EdepartamentoComponent
+    EdepartamentoComponent,
+    CategoriaComponent,
+    FormCategoriaComponent
   ],
   imports: [
     BrowserModule,

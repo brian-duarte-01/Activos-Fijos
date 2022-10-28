@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TcategoriaService } from './services/tcategoria.service';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 @Component({
   selector: 'app-root',
