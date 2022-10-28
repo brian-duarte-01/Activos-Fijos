@@ -1,1 +1,18 @@
-<p>form-categoria works!</p>
+<form [formGroup]="editarform">
+    <div class="form-group">
+        <label for="ID_CATEGORIA">ID Categoria</label>
+            <input type="text" class="form-control" name="ID_CATEGORIA"   placeholder="ID autogenerado" [(ngModel)]="categoria.ID_CATEGORIA" formControlName="ID_CATEGORIA">
+    </div>
+    <div class="form-group">
+        <label for="ID_TIPO_CATEGORIA">Tipo de Categoria</label>
+       
+            <input type="text" name="ID_TIPO_CATEGORIA"  class="form-control" placeholder="Ingrese Fabricante" [(ngModel)]="categoria.ID_TIPO_CATEGORIA" formControlName="ID_TIPO_CATEGORIA">
+       
+    </div>
+    <button class="btn btn-success" role="button" (click)="ingresarmaq()" *ngIf="!categoria.ID_CATEGORIA else elseBlock">Registrar Categoria</button>
+
+    <ng-template #elseBlock>
+        <button class="btn btn-success" role="button" (click)="editar(editarform.value)" >Actualizar</button>
+    </ng-template>
+    
+</form>

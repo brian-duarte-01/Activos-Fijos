@@ -29,4 +29,19 @@ export class CategoriaComponent implements OnInit {
     })
   }
 
+  findmaq (id: number){
+    let catactual = this.categoria.find((p) => {return p.ID_CATEGORIA == id});
+    console.log(catactual);
+
+  }
+
+  elimimaq(id: number){
+    this.categoriaService.delmaq(id).subscribe( data => {
+      console.log(data)
+      this.router.navigate(['/categoria'])
+    location.href = 'categoria';
+    })
+    
+  }
+
 }

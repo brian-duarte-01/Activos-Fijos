@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnunciosComponent } from './anuncios/anuncios.component';
@@ -47,7 +47,8 @@ import { FormCategoriaComponent } from './categoria/form-categoria/form-categori
     MatPaginatorModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    RouterModule
 
 
 

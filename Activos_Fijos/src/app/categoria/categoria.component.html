@@ -1,6 +1,6 @@
 <h1>Listado de Categorias</h1>
 <button class="btn btn-info" mat-raised-button matTooltip="Registrar nueva maquinaria" type="button" mat-button
-    color="primary" type="button" routerLink="categoria/crcategoria">
+    color="primary" type="button" routerLink="/categoria/crcategoria">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus"
       viewBox="0 0 16 16">
       <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z" />
@@ -21,8 +21,8 @@
         <th >{{catego.ID_CATEGORIA}}</th>
         <td>{{catego.ID_TIPO_CATEGORIA}}</td>
         <td>
-            <input type="button" class="btn btn-primary" >
-            <input type="button" class="btn btn-danger">
+            <button type="button" name="buttom" class="btn btn-primary" role="button" [routerLink]="['crcategoria', catego.ID_CATEGORIA]" (click)="findmaq(catego.ID_CATEGORIA)">Editar</button>
+                <button type="button" name="buttom" class="btn btn-danger" role="button"  (click)="elimimaq(catego.ID_CATEGORIA)">Eliminar</button>
 
         </td>
       </tr>

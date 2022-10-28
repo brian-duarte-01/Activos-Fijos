@@ -21,9 +21,10 @@ const routes: Routes = [
   {path:'tcategoria', component: TcategoriaComponent},
   {path:'categoria', component: CategoriaComponent},
   {path:'categoria/crcategoria', component: FormCategoriaComponent},
+  {path:'categoria/crcategoria/:id', component: FormCategoriaComponent},
   {path:'tcategoria/crmaquinaria', component: FormTcategoriaComponent},
   {path:'tcategoria/crmaquinaria/:id', component: FormTcategoriaComponent},
-  {path:'edepartamento/:id', component: EdepartamentoComponent}
+  {path:'edepartamento/:id', component: EdepartamentoComponent},
 ];
 
 @NgModule({
