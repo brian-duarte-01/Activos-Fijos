@@ -20,11 +20,7 @@ import {MatInputModule} from '@angular/material/input';
 import { EdepartamentoComponent } from './edepartamento/edepartamento.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { FormCategoriaComponent } from './categoria/form-categoria/form-categoria.component';
-<<<<<<< Updated upstream
 import { ActivoComponent } from './activo/activo.component';
-=======
-import { EestadoComponent } from './eestado/eestado.component';
->>>>>>> Stashed changes
 
 
 
@@ -41,11 +37,7 @@ import { EestadoComponent } from './eestado/eestado.component';
     EdepartamentoComponent,
     CategoriaComponent,
     FormCategoriaComponent,
-<<<<<<< Updated upstream
     ActivoComponent
-=======
-    EestadoComponent
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
