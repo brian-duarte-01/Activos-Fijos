@@ -10,7 +10,12 @@ import { FormTcategoriaComponent } from './tcategoria/form-tcategoria/form-tcate
 import { EdepartamentoComponent } from './edepartamento/edepartamento.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { FormCategoriaComponent } from './categoria/form-categoria/form-categoria.component';
+<<<<<<< HEAD
 import { EestadoComponent } from './eestado/eestado.component';
+=======
+import { ActivoComponent } from './activo/activo.component';
+import { FormActivoComponent } from './activo/form-activo/form-activo.component';
+>>>>>>> 8b9733334c73bc17ade0f05094a0f0bd075885f7
 
 const routes: Routes = [
   {path:'dashboard', component: AnunciosComponent},
@@ -21,6 +26,9 @@ const routes: Routes = [
   {path:'restado', component: RestadoComponent},
   {path:'tcategoria', component: TcategoriaComponent},
   {path:'categoria', component: CategoriaComponent},
+  {path:'activo', component: ActivoComponent},
+  {path:'activo/cractivo', component: FormActivoComponent},
+  {path:'activo/cractivo/:id', component: FormActivoComponent},
   {path:'categoria/crcategoria', component: FormCategoriaComponent},
   {path:'categoria/crcategoria/:id', component: FormCategoriaComponent},
   {path:'tcategoria/crmaquinaria', component: FormTcategoriaComponent},
