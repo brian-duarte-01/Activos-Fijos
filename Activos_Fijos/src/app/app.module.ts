@@ -20,6 +20,7 @@ import {MatInputModule} from '@angular/material/input';
 import { EdepartamentoComponent } from './edepartamento/edepartamento.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { FormCategoriaComponent } from './categoria/form-categoria/form-categoria.component';
+import { ActivoComponent } from './activo/activo.component';
 
 
 
@@ -35,7 +36,8 @@ import { FormCategoriaComponent } from './categoria/form-categoria/form-categori
     FormTcategoriaComponent,
     EdepartamentoComponent,
     CategoriaComponent,
-    FormCategoriaComponent
+    FormCategoriaComponent,
+    ActivoComponent
   ],
   imports: [
     BrowserModule,
