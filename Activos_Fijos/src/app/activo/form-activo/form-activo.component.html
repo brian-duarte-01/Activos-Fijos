@@ -1,0 +1,18 @@
+<form [formGroup]="editarform">
+    <div class="form-group">
+        <label for="ID_ACTIVO">ID Activo</label>
+            <input type="text" class="form-control" name="ID_ACTIVO"   placeholder="ID autogenerado" [(ngModel)]="activo.ID_ACTIVO" formControlName="ID_ACTIVO">
+    </div>
+    <div class="form-group">
+        <label for="ACT_NOMBRE">Nombre Activo</label>
+       
+            <input type="text" name="ACT_NOMBRE"  class="form-control" placeholder="Ingrese Fabricante" [(ngModel)]="activo.ACT_NOMBRE" formControlName="ACT_NOMBRE">
+       
+    </div>
+    <button class="btn btn-success" role="button" (click)="ingresarmaq()" *ngIf="!activo.ID_ACTIVO else elseBlock">Registrar Activo</button>
+
+    <ng-template #elseBlock>
+        <button class="btn btn-success" role="button" (click)="editar(editarform.value)" >Actualizar</button>
+    </ng-template>
+    
+</form>

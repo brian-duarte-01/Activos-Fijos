@@ -21,6 +21,7 @@ import { EdepartamentoComponent } from './edepartamento/edepartamento.component'
 import { CategoriaComponent } from './categoria/categoria.component';
 import { FormCategoriaComponent } from './categoria/form-categoria/form-categoria.component';
 import { ActivoComponent } from './activo/activo.component';
+import { FormActivoComponent } from './activo/form-activo/form-activo.component';
 
 
 
@@ -37,7 +38,8 @@ import { ActivoComponent } from './activo/activo.component';
     EdepartamentoComponent,
     CategoriaComponent,
     FormCategoriaComponent,
-    ActivoComponent
+    ActivoComponent,
+    FormActivoComponent
   ],
   imports: [
     BrowserModule,
