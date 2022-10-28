@@ -2,7 +2,7 @@
     <div class="listar">
         <div class="l">
             <div class="titulo">
-                <h1 class="ti">Listar Estado</h1>
+                <h1 class="ti">Estado</h1>
             </div>
         <div class="scroll">
             <div class="table-responsive">
@@ -21,7 +21,7 @@
                             <td class="td">
                                 <div class="btn-group btn-group-sm">
 
-                                    <button mat-raised-button matTooltip="Editar Registro" type="button" mat-button
+                                    <button mat-raised-button matTooltip="Editar Registro" (click)="editar(listars.id_estado)" type="button" mat-button
                                         color="primary">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">

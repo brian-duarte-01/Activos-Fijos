@@ -1,1 +1,48 @@
-<p>eestado works!</p>
+<div class="container">
+    <div class="fom">
+        <div>
+            <form class="row g-3" [formGroup]="form" (ngSubmit)="put(form.value)">
+
+
+
+                <div class="col-md-4 form-group">
+                    <label for="validationDefault01" class="form-label">Correlativo</label>
+                    <input type="text" placeholder="Digite el nombre de un departamento" class="form-control"
+                        formControlName="id_estado" readonly>
+
+                  
+
+                </div>
+              
+                   
+
+                    <div class="col-md-4 form-group">
+                        <label for="validationDefault01" class="form-label">Estado <b>*</b></label>
+                        <input type="text" placeholder="Digite el nombre de un departamento" class="form-control"
+                            formControlName="act_nombre">
+
+                        <div class="alert alert-danger" *ngIf="form.invalid && (form.dirty || form.touched)">
+                            <div class="container-error-message">
+                                Ingrese el departamento
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+               
+
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit" mat-raised-button matTooltip="Actualizar el estado" mat-button
+                        color="primary" [disabled]="!form.valid">Actualizar</button>
+                </div>
+            </form>
+
+            <div class="re">
+                <h3> ( <b>*</b> ) Asterisco Campo Obligatotio </h3>
+            </div>
+        </div>
+    </div>
+</div>

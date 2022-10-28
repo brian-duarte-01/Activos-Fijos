@@ -5,22 +5,18 @@
 
 
 
-                <div class="col-md-12 form-group">
-                    <label for="validationDefault01" class="form-label">Departamento <b>*</b></label>
+                <div class="col-md-4 form-group">
+                    <label for="validationDefault01" class="form-label">Correlativo</label>
                     <input type="text" placeholder="Digite el nombre de un departamento" class="form-control"
-                        formControlName="ID_DEPARTAMENTO" >
+                        formControlName="ID_DEPARTAMENTO"  readonly>
 
-                    <div class="alert alert-danger" *ngIf="form.invalid && (form.dirty || form.touched)">
-                        <div class="container-error-message">
-                            Ingrese el nombre de un departamento
-                        </div>
-                    </div>
+                   
 
                 </div>
               
                    
 
-                    <div class="col-md-12 form-group">
+                    <div class="col-md-4 form-group">
                         <label for="validationDefault01" class="form-label">Departamento <b>*</b></label>
                         <input type="text" placeholder="Digite el nombre de un departamento" class="form-control"
                             formControlName="DEP_NOMBRE">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiestadoService } from '../apiestado.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { ApiestadoService } from '../apiestado.service';
 export class LestadoComponent implements OnInit {
   listar: any = [];
   constructor(
-    private apiRest: ApiestadoService
+    private apiRest: ApiestadoService,
+    private route: Router
   ) { }
 
   ngOnInit(): void {
@@ -22,5 +24,9 @@ export class LestadoComponent implements OnInit {
         this.listar = respuesta;
       })
   }
+
+  editar(id:number) {
+    this.route.navigate(['eestado',id]);
+   }
 
 }

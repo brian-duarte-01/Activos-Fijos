@@ -10,6 +10,7 @@ import { FormTcategoriaComponent } from './tcategoria/form-tcategoria/form-tcate
 import { EdepartamentoComponent } from './edepartamento/edepartamento.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { FormCategoriaComponent } from './categoria/form-categoria/form-categoria.component';
+import { EestadoComponent } from './eestado/eestado.component';
 
 const routes: Routes = [
   {path:'dashboard', component: AnunciosComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'tcategoria/crmaquinaria', component: FormTcategoriaComponent},
   {path:'tcategoria/crmaquinaria/:id', component: FormTcategoriaComponent},
   {path:'edepartamento/:id', component: EdepartamentoComponent},
+  {path:'eestado/:id', component:EestadoComponent}
 ];
 
 @NgModule({

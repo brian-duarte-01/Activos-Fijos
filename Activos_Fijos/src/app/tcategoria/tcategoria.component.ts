@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TcategoriaService } from '../services/tcategoria.service';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tcategoria',
