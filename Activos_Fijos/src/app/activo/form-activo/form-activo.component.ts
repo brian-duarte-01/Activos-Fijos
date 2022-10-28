@@ -11,6 +11,7 @@ import { activo } from '../activo';
   styleUrls: ['./form-activo.component.css']
 })
 export class FormActivoComponent implements OnInit {
+
   activo: activo = new activo();
   public tcategoria:Array<any> = []
   _url = 'https://localhost:44340/api/ACTIVOes'
@@ -20,12 +21,12 @@ export class FormActivoComponent implements OnInit {
     ACT_NOMBRE: new FormControl('')
   });
 
-
   constructor(
     private activoService: ActivoService,
     private router:Router,
     private http: HttpClient,
     private activatedRoute: ActivatedRoute
+
   ) { 
     let ide = this.activatedRoute.snapshot.paramMap.get('id');
     var idd = String(ide)
@@ -41,13 +42,10 @@ export class FormActivoComponent implements OnInit {
     console.log(this.editarform);
   }
 
-
-  
-
   ngOnInit(): void {
   }
 
-  ingresarcat(){
+  ingresaract(){
     this.activoService.postact(this.activo)
     .subscribe((resp: any) => {
       this.activo=resp;

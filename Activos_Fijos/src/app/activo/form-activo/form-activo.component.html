@@ -6,10 +6,10 @@
     <div class="form-group">
         <label for="ACT_NOMBRE">Nombre Activo</label>
        
-            <input type="text" name="ACT_NOMBRE"  class="form-control" placeholder="Ingrese Fabricante" [(ngModel)]="activo.ACT_NOMBRE" formControlName="ACT_NOMBRE">
+            <input type="text" name="ACT_NOMBRE"  class="form-control" placeholder="Ingrese Nombre" [(ngModel)]="activo.ACT_NOMBRE" formControlName="ACT_NOMBRE">
        
     </div>
-    <button class="btn btn-success" role="button" (click)="ingresarmaq()" *ngIf="!activo.ID_ACTIVO else elseBlock">Registrar Activo</button>
+    <button class="btn btn-success" role="button" (click)="ingresaract()" *ngIf="!activo.ID_ACTIVO else elseBlock">Registrar Activo</button>
 
     <ng-template #elseBlock>
         <button class="btn btn-success" role="button" (click)="editar(editarform.value)" >Actualizar</button>
