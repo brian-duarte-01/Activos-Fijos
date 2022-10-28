@@ -13,7 +13,6 @@ export class LDepartamentoComponent implements OnInit {
 
   constructor(
     private apiRest: ApiDepartamentoService,
-    private fb: FormBuilder,
     private route: Router
   ) { }
 

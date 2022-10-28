@@ -1,0 +1,113 @@
+<div class="container">
+    <div class="fom">
+        <div>
+            <form class="row g-3" [formGroup]="form" (ngSubmit)="post()">
+
+
+
+
+                <div class="col-md-4">
+
+
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Nombre <b>*</b></label>
+                        <input type="text" placeholder="Digite el nombre" class="form-control"
+                            formControlName="ven_nombre" id="nombre">
+
+                        <div class="alert alert-danger" *ngIf="form.invalid && (form.dirty || form.touched)">
+                            <div class="container-error-message">
+                                Digite el nombre
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-md-4">
+
+
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Precio <b>*</b></label>
+                        <input type="text" placeholder="Digite el precio de venta" class="form-control"
+                            formControlName="ven_precio" id="nombre">
+
+                        <div class="alert alert-danger" *ngIf="form.invalid && (form.dirty || form.touched)">
+                            <div class="container-error-message">
+                                Digite el precio de venta
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Cantidad <b>*</b></label>
+                        <input type="text" placeholder="Digite la cantidad" class="form-control"
+                            formControlName="ven_cantidad" id="nombre">
+
+                        <div class="alert alert-danger" *ngIf="form.invalid && (form.dirty || form.touched)">
+                            <div class="container-error-message">
+                                Digite la cantidad
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Descripcion <b>*</b></label>
+                        <input type="text" placeholder="Digite una descripcion" class="form-control"
+                            formControlName="ven_descripcion" id="nombre">
+
+                        <div class="alert alert-danger" *ngIf="form.invalid && (form.dirty || form.touched)">
+                            <div class="container-error-message">
+                                Digite una descripcion
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Activo <b>*</b></label>
+                        <input type="text" placeholder="Digite el activo" class="form-control"
+                            formControlName="id_activo" id="nombre">
+
+                        <div class="alert alert-danger" *ngIf="form.invalid && (form.dirty || form.touched)">
+                            <div class="container-error-message">
+                                Digite el activo
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+   
+
+        <div class="col-12">
+            <button class="btn btn-primary" mat-raised-button matTooltip="Registrar el departamento" mat-button
+                color="primary" [disabled]="!form.valid">Enviar</button>
+        </div>
+        </form>
+
+        <div class="re">
+            <h3> ( <b>*</b> ) Asterisco Campo Obligatotio </h3>
+        </div>
+    </div>
+</div>
+</div>

@@ -13,7 +13,8 @@ import { FormCategoriaComponent } from './categoria/form-categoria/form-categori
 import { EestadoComponent } from './eestado/eestado.component';
 import { ActivoComponent } from './activo/activo.component';
 import { FormActivoComponent } from './activo/form-activo/form-activo.component';
-import { DepresComponent } from './depres/depres.component';
+import { LdetalleVentaComponent } from './ldetalle-venta/ldetalle-venta.component';
+import { RdetalleVentaComponent } from './rdetalle-venta/rdetalle-venta.component';
 
 const routes: Routes = [
   {path:'dashboard', component: AnunciosComponent},
@@ -25,7 +26,6 @@ const routes: Routes = [
   {path:'tcategoria', component: TcategoriaComponent},
   {path:'categoria', component: CategoriaComponent},
   {path:'activo', component: ActivoComponent},
-  {path:'depres', component: DepresComponent},
   {path:'activo/cractivo', component: FormActivoComponent},
   {path:'activo/cractivo/:id', component: FormActivoComponent},
   {path:'categoria/crcategoria', component: FormCategoriaComponent},
@@ -33,7 +33,9 @@ const routes: Routes = [
   {path:'tcategoria/crmaquinaria', component: FormTcategoriaComponent},
   {path:'tcategoria/crmaquinaria/:id', component: FormTcategoriaComponent},
   {path:'edepartamento/:id', component: EdepartamentoComponent},
-  {path:'eestado/:id', component:EestadoComponent}
+  {path:'eestado/:id', component:EestadoComponent},
+  {path:'detalleventa', component: LdetalleVentaComponent},
+ {path:'rdetalleventa', component: RdetalleVentaComponent}
 ];
 
 @NgModule({
