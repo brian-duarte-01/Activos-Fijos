@@ -23,6 +23,8 @@ import { FormCategoriaComponent } from './categoria/form-categoria/form-categori
 import { ActivoComponent } from './activo/activo.component';
 import { EestadoComponent } from './eestado/eestado.component';
 import { FormActivoComponent } from './activo/form-activo/form-activo.component';
+import { DepresComponent } from './depres/depres.component';
+import { FormDepresComponent } from './depres/form-depres/form-depres.component';
 
 
 
@@ -41,7 +43,9 @@ import { FormActivoComponent } from './activo/form-activo/form-activo.component'
     FormCategoriaComponent,
     ActivoComponent,
     EestadoComponent,
-    FormActivoComponent
+    FormActivoComponent,
+    DepresComponent,
+    FormDepresComponent
   ],
   imports: [
     BrowserModule,

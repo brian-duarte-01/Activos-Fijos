@@ -13,6 +13,7 @@ import { FormCategoriaComponent } from './categoria/form-categoria/form-categori
 import { EestadoComponent } from './eestado/eestado.component';
 import { ActivoComponent } from './activo/activo.component';
 import { FormActivoComponent } from './activo/form-activo/form-activo.component';
+import { DepresComponent } from './depres/depres.component';
 
 const routes: Routes = [
   {path:'dashboard', component: AnunciosComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'tcategoria', component: TcategoriaComponent},
   {path:'categoria', component: CategoriaComponent},
   {path:'activo', component: ActivoComponent},
+  {path:'depres', component: DepresComponent},
   {path:'activo/cractivo', component: FormActivoComponent},
   {path:'activo/cractivo/:id', component: FormActivoComponent},
   {path:'categoria/crcategoria', component: FormCategoriaComponent},
