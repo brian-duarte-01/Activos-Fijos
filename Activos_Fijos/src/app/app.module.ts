@@ -25,6 +25,7 @@ import { EestadoComponent } from './eestado/eestado.component';
 import { FormActivoComponent } from './activo/form-activo/form-activo.component';
 import { LdetalleVentaComponent } from './ldetalle-venta/ldetalle-venta.component';
 import { RdetalleVentaComponent } from './rdetalle-venta/rdetalle-venta.component';
+import { DepresComponent } from './depres/depres.component';
 
 
 
@@ -45,7 +46,8 @@ import { RdetalleVentaComponent } from './rdetalle-venta/rdetalle-venta.componen
     EestadoComponent,
     FormActivoComponent,
     LdetalleVentaComponent,
-    RdetalleVentaComponent
+    RdetalleVentaComponent,
+    DepresComponent
   ],
   imports: [
     BrowserModule,
