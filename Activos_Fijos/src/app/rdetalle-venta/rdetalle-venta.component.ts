@@ -22,7 +22,7 @@ export class RdetalleVentaComponent implements OnInit {
     this.form = this.fb.group({
       id_detalle_venta: ['0'],
       ven_nombre : new FormControl('',[Validators.required]),
-      ven_precio : new FormControl('',[Validators.required]),
+      ven_precio : new FormControl('',[Validators.min(0), Validators.required]),
       ven_cantidad : new FormControl('',[Validators.required]),
       ven_descripcion : new FormControl('',[Validators.required]),
       id_activo : new FormControl('',[Validators.required]),
