@@ -8,7 +8,6 @@
         <th scope="col">Nombre Activo</th>
         <th scope="col">Fecha de Ingreso</th>
         <th scope="col">Precio Actual</th>
-        <th scope="col">Depresiacion</th>
       </tr>
     </thead>
     <tbody>
@@ -17,10 +16,7 @@
           <td>{{depre.ACT_SERIE}}</td>
           <td>{{depre.ACT_NOMBRE}}</td>
           <td>{{depre.ACT_FECHAINGRESO}}</td>
-          <td>{{depre.ACT_PRECIO}}</td>
-          <td>
-              <label>Faltan X dias para aplicar deprecicacion</label>
-          </td>
+          <td>Q.{{depre.ACT_PRECIO}}</td>
         </tr>
       </tbody>
     </table>
