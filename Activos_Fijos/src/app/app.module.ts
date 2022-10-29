@@ -26,6 +26,9 @@ import { FormActivoComponent } from './activo/form-activo/form-activo.component'
 import { LdetalleVentaComponent } from './ldetalle-venta/ldetalle-venta.component';
 import { RdetalleVentaComponent } from './rdetalle-venta/rdetalle-venta.component';
 import { DepresComponent } from './depres/depres.component';
+import { LalquilerComponent } from './lalquiler/lalquiler.component';
+import { LproductoComponent } from './lproducto/lproducto.component';
+import { LproveedorComponent } from './lproveedor/lproveedor.component';
 
 
 
@@ -47,7 +50,10 @@ import { DepresComponent } from './depres/depres.component';
     FormActivoComponent,
     LdetalleVentaComponent,
     RdetalleVentaComponent,
-    DepresComponent
+    DepresComponent,
+    LalquilerComponent,
+    LproductoComponent,
+    LproveedorComponent
   ],
   imports: [
     BrowserModule,
