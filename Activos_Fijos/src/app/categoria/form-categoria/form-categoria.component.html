@@ -1,18 +1,62 @@
-<form [formGroup]="editarform">
-    <div class="form-group">
-        <label for="ID_CATEGORIA">ID Categoria</label>
-            <input type="text" class="form-control" name="ID_CATEGORIA"   placeholder="ID autogenerado" [(ngModel)]="categoria.ID_CATEGORIA" formControlName="ID_CATEGORIA">
-    </div>
-    <div class="form-group">
-        <label for="ID_TIPO_CATEGORIA">Tipo de Categoria</label>
-       
-            <input type="text" name="ID_TIPO_CATEGORIA"  class="form-control" placeholder="Ingrese Fabricante" [(ngModel)]="categoria.ID_TIPO_CATEGORIA" formControlName="ID_TIPO_CATEGORIA">
-       
-    </div>
-    <button class="btn btn-success" role="button" (click)="ingresarmaq()" *ngIf="!categoria.ID_CATEGORIA else elseBlock">Registrar Categoria</button>
+<div class="container">
+    <div class="fom">
+        <div>
+            <form [formGroup]="editarform" class="row g-3">
 
-    <ng-template #elseBlock>
-        <button class="btn btn-success" role="button" (click)="editar(editarform.value)" >Actualizar</button>
-    </ng-template>
-    
-</form>
+
+
+                <div class="col-md-6">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ID_CATEGORIA">ID Categoria</label>
+                            <input type="text" class="form-control" name="ID_CATEGORIA" placeholder="ID autogenerado"
+                                [(ngModel)]="categoria.ID_CATEGORIA" formControlName="ID_CATEGORIA">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ID_TIPO_CATEGORIA">Tipo de Categoria <b>*</b></label>
+
+                            <input type="text" name="ID_TIPO_CATEGORIA" class="form-control"
+                                placeholder="Ingrese Fabricante" [(ngModel)]="categoria.ID_TIPO_CATEGORIA"
+                                formControlName="ID_TIPO_CATEGORIA">
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="editarform.invalid && (editarform.dirty || editarform.touched)">
+                            <div class="container-error-message">
+                                Ingrese el id de tipo categoria
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-12">
+                    <button class="btn btn-success" role="button" (click)="ingresarmaq()"
+                        *ngIf="!categoria.ID_CATEGORIA else elseBlock" mat-raised-button
+                        matTooltip="Registrar la categoria" mat-button color="primary"
+                        [disabled]="!editarform.valid">Registrar Categoria</button>
+                </div>
+
+                <div class="col-12">
+                    <ng-template #elseBlock>
+                        <button class="btn btn-success" role="button" (click)="editar(editarform.value)"
+                            mat-raised-button matTooltip="Actualizar la categoria" mat-button color="primary"
+                            [disabled]="!editarform.valid">Actualizar</button>
+                    </ng-template>
+                </div>
+
+            </form>
+            <div class="re">
+                <h3> ( <b>*</b> ) Asterisco Campo Obligatotio </h3>
+            </div>
+        </div>
+    </div>
+</div>

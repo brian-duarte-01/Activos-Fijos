@@ -18,7 +18,7 @@ export class FormActivoComponent implements OnInit {
 
   editarform = new FormGroup({
     ID_ACTIVO: new FormControl(''),
-    ACT_NOMBRE: new FormControl('')
+    ACT_NOMBRE: new FormControl('',[Validators.required])
   });
 
   constructor(

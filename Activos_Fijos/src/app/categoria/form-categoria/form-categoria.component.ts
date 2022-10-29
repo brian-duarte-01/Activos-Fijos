@@ -19,7 +19,7 @@ export class FormCategoriaComponent implements OnInit {
 
   editarform = new FormGroup({
     ID_CATEGORIA: new FormControl(''),
-    ID_TIPO_CATEGORIA: new FormControl('')
+    ID_TIPO_CATEGORIA: new FormControl('',[Validators.required])
   });
 
   constructor(

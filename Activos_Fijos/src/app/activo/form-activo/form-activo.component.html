@@ -1,18 +1,61 @@
-<form >
-    <div class="form-group">
-        <label for="ID_ACTIVO">ID Activo</label>
-            <input type="text" class="form-control" name="ID_ACTIVO"   placeholder="ID autogenerado" [(ngModel)]="activo.ID_ACTIVO" formControlName="ID_ACTIVO">
-    </div>
-    <div class="form-group">
-        <label for="ACT_NOMBRE">Nombre Activo</label>
-       
-            <input type="text" name="ACT_NOMBRE"  class="form-control" placeholder="Ingrese Nombre" [(ngModel)]="activo.ACT_NOMBRE" formControlName="ACT_NOMBRE">
-       
-    </div>
-    <button class="btn btn-success" role="button" (click)="ingresaract()" *ngIf="!activo.ID_ACTIVO else elseBlock">Registrar Activo</button>
+<div class="container">
+    <div class="fom">
+        <div>
+            <form class="row g-3" [formGroup]="editarform">
 
-    <ng-template #elseBlock>
-        <button class="btn btn-success" role="button" (click)="editar(editarform.value)" >Actualizar</button>
-    </ng-template>
-    
-</form>
+
+                <div class="col-md-6">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ID_ACTIVO">ID Activo</label>
+                            <input type="text" class="form-control" name="ID_ACTIVO" placeholder="ID autogenerado"
+                                [(ngModel)]="activo.ID_ACTIVO" formControlName="ID_ACTIVO" readonly>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ACT_NOMBRE">Nombre Activo <b>*</b></label>
+
+                            <input type="text" name="ACT_NOMBRE" class="form-control" placeholder="Ingrese Nombre"
+                                [(ngModel)]="activo.ACT_NOMBRE" formControlName="ACT_NOMBRE">
+
+                        </div>
+                        <div class="alert alert-danger"
+                            *ngIf="editarform.invalid && (editarform.dirty || editarform.touched)">
+                            <div class="container-error-message">
+                                Ingrese Nombre del activo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12">
+                    <button class="btn btn-success" role="button" (click)="ingresaract()"
+                        *ngIf="!activo.ID_ACTIVO else elseBlock" mat-raised-button matTooltip="Registrar activo"
+                        mat-button color="primary" [disabled]="!editarform.valid">Registrar Activo</button>
+                </div>
+
+                <div class="col-12">
+                    <ng-template #elseBlock>
+                        <button class="btn btn-success" role="button" (click)="editar(editarform.value)"
+                            mat-raised-button matTooltip="Actualizar activo" mat-button color="primary"
+                            [disabled]="!editarform.valid">Actualizar</button>
+                    </ng-template>
+                </div>
+
+
+            </form>
+
+            <div class="re">
+                <h3> ( <b>*</b> ) Asterisco Campo Obligatotio </h3>
+            </div>
+        </div>
+    </div>
+</div>

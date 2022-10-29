@@ -1,36 +1,107 @@
-<form [formGroup]="editarform">
-    <div class="form-group">
-        <label for="ID_TIPO_CATEGORIA">ID Tipo Categoria</label>
-            <input type="text" class="form-control" name="ID_TIPO_CATEGORIA"   placeholder="ID autogenerado" [(ngModel)]="maquinaria.ID_TIPO_CATEGORIA" formControlName="ID_TIPO_CATEGORIA">
-    </div>
-    <div class="form-group">
-        <label for="MQ_FABRICANTE">Fabricante</label>
-       
-            <input type="text" name="MQ_FABRICANTE"  class="form-control" placeholder="Ingrese Fabricante" [(ngModel)]="maquinaria.MQ_FABRICANTE" formControlName="MQ_FABRICANTE">
-       
-    </div>
-    <div class="form-group">
-        <label for="MQ_TIPO">Tipo</label>
-       
-            <input type="text" name="MQ_TIPO" class="form-control"  placeholder="Ingrese Tipo" [(ngModel)]="maquinaria.MQ_TIPO" formControlName="MQ_TIPO">
-        
-    </div>
-    <div class="form-group">
-        <label for="MQ_MODELO">Modelo</label>
-        
-            <input type="text" name="MQ_MODELO" class="form-control" placeholder="Ingrese Modelo" [(ngModel)]="maquinaria.MQ_MODELO" formControlName="MQ_MODELO">
-        
-    </div>
-    <div class="form-group">
-        <label for="MQ_DESCRIPCION">Descripcion</label>
-        
-            <input type="text" name="MQ_DESCRIPCION" class="form-control" placeholder="Ingrese Descripcion" [(ngModel)]="maquinaria.MQ_DESCRIPCION" formControlName="MQ_DESCRIPCION">
-        
-    </div>
-    <button class="btn btn-success" role="button" (click)="ingresarmaq()" *ngIf="!maquinaria.ID_TIPO_CATEGORIA else elseBlock">Registrar Maquinaria</button>
+<div class="container">
+    <div class="fom">
+        <div>
+            <form [formGroup]="editarform" class="row g-3">
 
-    <ng-template #elseBlock>
-        <button class="btn btn-success" role="button" (click)="editar(editarform.value)" >Actualizar</button>
-    </ng-template>
-    
-</form>
+
+
+
+                <div class="col-md-4">
+                    <div class="form-group col-md-4">
+                        <label for="ID_TIPO_CATEGORIA">ID Tipo Categoria</label>
+                        <input type="text" class="form-control" name="ID_TIPO_CATEGORIA" placeholder="ID autogenerado"
+                            [(ngModel)]="maquinaria.ID_TIPO_CATEGORIA" formControlName="ID_TIPO_CATEGORIA" readonly>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="col-md-4">
+                    <div class="form-group col-md-4">
+                        <label for="MQ_FABRICANTE">Fabricante <b>*</b></label>
+                        <input type="text" name="MQ_FABRICANTE" class="form-control" placeholder="Ingrese Fabricante"
+                            [(ngModel)]="maquinaria.MQ_FABRICANTE" formControlName="MQ_FABRICANTE">
+                        <div class="alert alert-danger"
+                            *ngIf="editarform.invalid && (editarform.dirty || editarform.touched)">
+                            <div class="container-error-message">
+                                Ingrese Fabricante
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-md-4">
+                    <div class="form-group col-md-4">
+                        <label for="MQ_TIPO">Tipo <b>*</b></label>
+                        <input type="text" name="MQ_TIPO" class="form-control" placeholder="Ingrese Tipo"
+                            [(ngModel)]="maquinaria.MQ_TIPO" formControlName="MQ_TIPO">
+                        <div class="alert alert-danger"
+                            *ngIf="editarform.invalid && (editarform.dirty || editarform.touched)">
+                            <div class="container-error-message">
+                                Ingrese Tipo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="form-group col-md-4">
+                        <label for="MQ_MODELO">Modelo <b>*</b></label>
+                        <input type="text" name="MQ_MODELO" class="form-control" placeholder="Ingrese Modelo"
+                            [(ngModel)]="maquinaria.MQ_MODELO" formControlName="MQ_MODELO">
+                        <div class="alert alert-danger"
+                            *ngIf="editarform.invalid && (editarform.dirty || editarform.touched)">
+                            <div class="container-error-message">
+                                Ingrese Modelo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4">
+
+                    <div class="form-group col-md-4">
+                        <label for="MQ_DESCRIPCION">Descripcion <b>*</b></label>
+                        <input type="text" name="MQ_DESCRIPCION" class="form-control" placeholder="Ingrese Descripcion"
+                            [(ngModel)]="maquinaria.MQ_DESCRIPCION" formControlName="MQ_DESCRIPCION">
+                        <div class="alert alert-danger"
+                            *ngIf="editarform.invalid && (editarform.dirty || editarform.touched)">
+                            <div class="container-error-message">
+                                Ingrese Descripcion
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-12">
+                    <button class="btn btn-success" role="button" (click)="ingresarmaq()"
+                        *ngIf="!maquinaria.ID_TIPO_CATEGORIA else elseBlock" mat-raised-button
+                        matTooltip="Registrar formulario" mat-button color="primary"
+                        [disabled]="!editarform.valid">Registrar</button>
+                </div>
+
+                <div class="col-12">
+                    <ng-template #elseBlock>
+                        <button class="btn btn-success" role="button" (click)="editar(editarform.value)"
+                            mat-raised-button matTooltip="Actualizar registro" mat-button color="primary"
+                            [disabled]="!editarform.valid">Actualizar</button>
+                    </ng-template>
+                </div>
+            </form>
+            <div class="re">
+                <h3> ( <b>*</b> ) Asterisco Campo Obligatotio </h3>
+            </div>
+        </div>
+    </div>
+</div>

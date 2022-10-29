@@ -1,0 +1,34 @@
+.listar{
+    height: 100vh;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+.botones{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+.scroll{
+    height: 70vh;
+    overflow-y: scroll;
+    width: 100%;
+}
+.scroll::-webkit-scrollbar{
+    width: 5px;
+}
+.ti{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+.td{
+    text-align: center;
+}

@@ -19,7 +19,7 @@ export class FormTcategoriaComponent implements OnInit {
 
   editarform = new FormGroup({
     ID_TIPO_CATEGORIA: new FormControl(''),
-    DP_NOMBRE: new FormControl(''),
+    DP_NOMBRE: new FormControl('',),
     DP_SERIE: new FormControl(''),
     DP_FECHA_DE_VENCIMIENTO: new FormControl(''),
     DP_DETALLES: new FormControl(''),
@@ -43,10 +43,10 @@ export class FormTcategoriaComponent implements OnInit {
     EF_TIPO: new FormControl(''),
     EF_MODELO: new FormControl(''),
     EF_DESCRIPCION: new FormControl(''),
-    MQ_FABRICANTE: new FormControl(''),
-    MQ_TIPO: new FormControl(''),
-    MQ_MODELO: new FormControl(''),
-    MQ_DESCRIPCION: new FormControl('')
+    MQ_FABRICANTE: new FormControl('',[Validators.required]),
+    MQ_TIPO: new FormControl('',[Validators.required]),
+    MQ_MODELO: new FormControl('',[Validators.required]),
+    MQ_DESCRIPCION: new FormControl('',[Validators.required])
 
 
   }
